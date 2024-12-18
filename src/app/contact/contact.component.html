@@ -1,0 +1,93 @@
+<app-header></app-header>
+
+<div class="container bg-success p-5">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 text-light d-flex justify-content-center align-items-center flex-column">
+            <h1 class="my-5">Contact Us</h1>
+            <p class="my-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto sequi praesentium porro nemo
+                vero, incidunt perferendis quidem, totam fuga deserunt maxime ducimus quasi nobis voluptatem nulla est
+                cum. Ipsa, suscipit?</p>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <h1>Get In Touch</h1>
+            <p style="text-align: justify;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+                voluptatibus assumenda fuga minima enim blanditiis mollitia labore est quis deleniti eligendi vitae
+                neque delectus ullam, reprehenderit velit quisquam laudantium veritatis.</p>
+            <div class="d-flex mt-4">
+                <div class="bg-success d-flex justify-content-center align-items-center p-2 text-light rounded-circle"
+                    style="width: 40px;height: 40px;"><i class="fa-solid fa-location-crosshairs"></i></div>
+                <div class="ms-3">
+                    <h5>Address</h5>
+                    <p>NYC 4567 , PO Berlin</p>
+                </div>
+            </div>
+
+            <div class="d-flex">
+                <div class="bg-success d-flex justify-content-center align-items-center p-2 text-light rounded-circle"
+                    style="width: 40px;height: 40px;"><i class="fa-solid fa-phone"></i></div>
+                <div class="ms-3">
+                    <h5>Phone Number</h5>
+                    <p>9852036471</p>
+                </div>
+            </div>
+            <div class="d-flex">
+                <div class="bg-success d-flex justify-content-center align-items-center p-2 text-light rounded-circle"
+                    style="width: 40px;height: 40px;"><i class="fa-solid fa-envelope"></i></div>
+                <div class="ms-3">
+                    <h5>Email</h5>
+                    <p>{{demoMail}}</p>
+                </div>
+            </div>
+            <hr>
+            <h4>Follow US</h4>
+            <div class="d-flex mt-4">
+                <div class="bg-success d-flex justify-content-center align-items-center p-2 text-light rounded-circle"
+                    style="width: 40px;height: 40px;"><i class="fa-brands fa-facebook"></i></div>
+                <div class="bg-success d-flex justify-content-center align-items-center p-2 text-light rounded-circle ms-3"
+                    style="width: 40px;height: 40px;"><i class="fa-brands fa-instagram"></i></div>
+                <div class="bg-success d-flex justify-content-center align-items-center p-2 text-light rounded-circle ms-3"
+                    style="width: 40px;height: 40px;"><i class="fa-brands fa-twitter"></i></div>
+                <div class="bg-success d-flex justify-content-center align-items-center p-2 text-light rounded-circle ms-3"
+                    style="width: 40px;height: 40px;"><i class="fa-brands fa-youtube"></i></div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+            <form [formGroup]="testimonyForm" (ngSubmit)="addTestimony()" class="border shadow p-5">
+                <h1 class="mb-5">Client Testimony</h1>
+                <div class="my-4">
+                    <input type="text" class="form-control" placeholder="Name" formControlName="name" name="uname">
+                </div>
+                <div class="my-4">
+                    <input type="text" class="form-control" placeholder="Email" formControlName="email" name="uemail">
+                </div>
+                <div class="my-4">
+                    <textarea placeholder="Message" class="form-control" formControlName="message"
+                        name="umessage"></textarea>
+                </div>
+                <p class="text-secondary">By submitting ,You are agreeing to the terms and condition of our website . we
+                    may use your details in our site.</p>
+                <div class="float-end">
+                    <button type="submit" class="btn btn-success">Sumbit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31435.334932221434!2d76.56729854305487!3d9.982382067799916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07dd8c9df6f0f3%3A0xb4506cffcc7062e5!2sMuvattupuzha%2C%20Kerala!5e0!3m2!1sen!2sin!4v1732198863574!5m2!1sen!2sin"
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<app-footer></app-footer>

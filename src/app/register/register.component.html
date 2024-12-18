@@ -1,0 +1,46 @@
+<div class="container-fluid my-5">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+            <form class="my-5 p-5 shadow border rounded w-100" [formGroup]="registerForm" (ngSubmit)="register()">
+                <h1 class="text-center"><i class="fa-solid fa-kitchen-set me-2"></i>Cookpedia</h1>
+                <div class="mb-3 mt-5">
+                    <input type="text" class="form-control" placeholder="Username" formControlName="username" name="uname">
+                    @if(registerForm.get('username')?.errors && registerForm.get('username')?.touched){
+                        <span class="text-danger">*Invalid Username</span>
+                    }
+                </div>
+                <div class="mb-3 mt-4">
+                    <input type="text" class="form-control" placeholder="Email" formControlName="email" name="uemail">
+                    @if(registerForm.get('email')?.errors && registerForm.get('email')?.touched){
+                        <span class="text-danger">*Invalid Email</span>
+                    }
+                </div>
+                <div class="mb-3 mt-4">
+                    <input type="password" class="form-control" placeholder="Password" formControlName="password" name="upassword">
+                    @if(registerForm.get('password')?.errors && registerForm.get('password')?.touched){
+                        <span class="text-danger">*Invalid Password</span>
+                    }
+                </div>
+                <div class="mb-4 mt-5">
+                    <button type="submit" class="btn btn-success w-100">Register</button>
+                </div>
+                <span class="text-secondary">Already User?<a routerLink="/login" class="text-success">Login</a></span>
+            </form>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+            <div>
+                <h1>Create an Account</h1>
+                <h5>What you will get ?</h5>
+                <ul class="mt-4">
+                    <li>Different Recipes</li>
+                    <li>Easy way to Cook</li>
+                    <li>Save your favourite Recipe</li>
+                    <li>Download your Recipe</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
